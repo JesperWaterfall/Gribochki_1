@@ -1,0 +1,47 @@
+﻿<Window x:Class="MushroomApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Грибы" Height="450" Width="600">
+    <Grid Margin="0,0,0,-156">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox x:Name="listBoxMushrooms" SelectionChanged="listBoxMushrooms_SelectionChanged" 
+                 DisplayMemberPath="Name" Margin="10" Background="#FF59B181"/>
+
+        <StackPanel Grid.Column="1" Margin="10" Background="#FFA9E87D">
+            <TextBlock Text="id:"/>
+            <TextBox x:Name="textBoxId" IsReadOnly="True"/>
+            <TextBlock Text="Название:"/>
+            <TextBox x:Name="textBoxName"/>
+            <TextBlock Text="Цвет:"/>
+            <TextBox x:Name="textBoxColor"/>
+            <TextBlock Text="Съедобность:"/>
+            <CheckBox x:Name="checkBoxIsEdible"/>
+            <TextBlock Text="Вес (кг):"/>
+            <TextBox x:Name="textBoxWeight"/>
+            <TextBlock Text="Высота (см):"/>
+            <TextBox x:Name="textBoxHeight"/>
+            <TextBlock Text="Радиус шляпки (см):"/>
+            <TextBox x:Name="textBoxCapRadius"/>
+            <Button Content="Сохранить" Click="ButtonSave_Click" Margin="5"/>
+
+            <TextBlock Text="Новый гриб" FontWeight="Bold" Margin="10,20,0,0"/>
+            <TextBlock Text="Название:"/>
+            <TextBox x:Name="textBoxNewName"/>
+            <TextBlock Text="Цвет:"/>
+            <TextBox x:Name="textBoxNewColor"/>
+            <TextBlock Text="Съедобность:"/>
+            <CheckBox x:Name="checkBoxNewIsEdible"/>
+            <TextBlock Text="Вес (кг):"/>
+            <TextBox x:Name="textBoxNewWeight"/>
+            <TextBlock Text="Высота (см):"/>
+            <TextBox x:Name="textBoxNewHeight"/>
+            <TextBlock Text="Радиус шляпки (см):"/>
+            <TextBox x:Name="textBoxNewCapRadius"/>
+            <Button Content="Добавить" Click="ButtonAdd_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
